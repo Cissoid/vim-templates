@@ -1,11 +1,11 @@
 if exists("g:loaded_templates")
     finish
 endif
-
 let g:loaded_templates = 1
 
 if !exists('g:templates_folder')
-    let g:templates_folder = '~/.vim/templates/'
+    " let g:templates_folder = '~/.vim/templates/'
+    let g:templates_folder = expand('%:p:h') . '/templates/'
 endif
 
 if !exists('g:templates_exec_start')
@@ -16,14 +16,29 @@ if !exists('g:templates_exec_end')
     let g:templates_exec_end = '\[:END_EVAL:\]'
 endif
 
-if !exists('g:templates_exec_lines')
-    let g:templates_exec_lines = 10
-endif
-
 if !exists('g:templates_update_lines')
-    let g:templates_update_lines = g:templates_exec_lines
+    let g:templates_update_lines = 10
 endif
 
-nmap <Leader>at :call templates#AddFileTemplate()<CR>
+if !exists('g:templates_custom_parsers')
+    let g:templates_custom_parsers = {}
+endif
+
+if !exists('g:templates_modified_prefix')
+    let g:templates_modified_prefix = 'Last Modified: '
+endif
+
+if !exists('g:templates_modified_suffix')
+    let g:templates_modified_suffix = ''
+endif
+
+if !exists('g:templates_time_format')
+    let g:templates_time_format = '%FT%T%z'
+    let g:templates_time_regex = '[0-9]{4}\-[0-9]{2}\-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\+|\-)[0-9]{4}'
+endif
+
+nnoremap <Plug>AddFileTemplate :call templates#AddFileTemplate()<CR>
+
+nmap <Leader>at <Plug>AddFileTemplate
 
 autocmd! BufWritePre * call templates#UpdateFileTemplate()
