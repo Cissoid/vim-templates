@@ -5,7 +5,7 @@ let g:loaded_templates = 1
 
 if !exists('g:templates_folder')
     " let g:templates_folder = '~/.vim/templates/'
-    let g:templates_folder = expand('%:p:h') . '/templates/'
+    let g:templates_folder = expand('<sfile>:p:h:h') . '/templates/'
 endif
 
 if !exists('g:templates_exec_start')
