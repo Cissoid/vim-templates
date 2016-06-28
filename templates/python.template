@@ -1,9 +1,10 @@
+#!/usr/bin/env python
 # coding: utf-8
 # File Name: [:VIM_EVAL:]CurrentFile[:END_EVAL:]
 # Author:
 # Created At: [:VIM_EVAL:]CurrentTime[:END_EVAL:]
 # Last Modified: [:VIM_EVAL:]CurrentTime[:END_EVAL:]
-from __future__ import print_function, unicode_literals
+from __future__ import absolute_import, division, print_function, unicode_literals
 
 
 def main():
