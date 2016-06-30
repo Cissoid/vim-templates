@@ -3,17 +3,20 @@ let s:templates_parsers = {
     \ "CURRENT_TIME": "templates#parser#CurrentTime"
     \ }
 
-function! s:ParseCommand(parser_name)
-    echom a:parser_name
-    if has_key(g:templates_custom_parsers, a:parser_name)
-        let l:func = g:templates_custom_parsers[a:parser_name]
-    elseif has_key(s:templates_parsers, a:parser_name)
-        let l:func = s:templates_parsers[a:parser_name]
+function! s:ParseCommand(parser_args)
+    let l:parser_args = split(a:parser_args, '|')
+    let l:func_name = l:parser_args[0]
+    let l:func_args = l:parser_args[1:]
+
+    if has_key(g:templates_custom_parsers, l:func_name)
+        let l:func = g:templates_custom_parsers[l:func_name]
+    elseif has_key(s:templates_parsers, l:func_name)
+        let l:func = s:templates_parsers[l:func_name]
     else
-        return a:parser_name
+        return l:func_name
     endif
 
-    return function(l:func)()
+    return function(l:func, l:func_args)()
 endfunction
 
 function! templates#AddFileTemplate()
