@@ -1,6 +1,6 @@
 let s:templates_parsers = {
-    \ "CurrentFile": "templates#parser#CurrentFile",
-    \ "CurrentTime": "templates#parser#CurrentTime"
+    \ "CURRENT_FILE": "templates#parser#CurrentFile",
+    \ "CURRENT_TIME": "templates#parser#CurrentTime"
     \ }
 
 function! s:ParseCommand(parser_name)
@@ -14,7 +14,7 @@ function! s:ParseCommand(parser_name)
     endif
 
     return function(l:func)()
-endfunction!
+endfunction
 
 function! templates#AddFileTemplate()
     let l:template_file = g:templates_folder . &filetype . '.template'
