@@ -1,6 +1,7 @@
 let s:templates_parsers = {
-    \ "CURRENT_FILE": "templates#parser#CurrentFile",
-    \ "CURRENT_TIME": "templates#parser#CurrentTime"
+    \ 'CURRENT_FILE': 'templates#parser#CurrentFile',
+    \ 'CURRENT_TIME': 'templates#parser#CurrentTime',
+    \ 'GIT_AUTHOR': 'templates#parser#GitAuthor'
     \ }
 
 function! s:ParseCommand(parser_args)

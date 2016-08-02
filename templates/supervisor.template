@@ -1,5 +1,5 @@
 ; File Name: [:VIM_EVAL:]CURRENT_FILE[:END_EVAL:]
-; Author: 
+; Author: [:VIM_EVAL:]GIT_AUTHOR[:END_EVAL:]
 ; Created At: [:VIM_EVAL:]CURRENT_TIME[:END_EVAL:]
 ; Last Modified: [:VIM_EVAL:]CURRENT_TIME[:END_EVAL:]
 
