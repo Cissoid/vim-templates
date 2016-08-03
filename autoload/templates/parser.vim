@@ -7,5 +7,5 @@ function! templates#parser#CurrentTime()
 endfunction
 
 function! templates#parser#GitAuthor()
-    return substitute(system('git config user.name 2>/dev/null'), '\v\C\r|\n', '', 'g')
+    return substitute(system('cd ' . expand('%:h') . ' && ' . 'git config user.name 2>/dev/null'), '\v\C\r|\n', '', 'g')
 endfunction
