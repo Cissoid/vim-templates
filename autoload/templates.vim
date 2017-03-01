@@ -1,3 +1,9 @@
+" File Name: templates.vim
+" Author: cissoid
+" Created At: 2017-03-01T18:23:28+0800
+" Last Modified: 2017-03-01T18:23:42+0800
+scriptencoding utf-8
+
 let s:templates_parsers = {
     \ 'CURRENT_FILE': 'templates#parser#CurrentFile',
     \ 'CURRENT_TIME': 'templates#parser#CurrentTime',

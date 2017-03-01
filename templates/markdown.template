@@ -1,19 +1,6 @@
-<!DOCTYPE html>
 <!--
     File Name: [:VIM_EVAL:]CURRENT_FILE[:END_EVAL:]
     Author: [:VIM_EVAL:]GIT_AUTHOR[:END_EVAL:]
     Created At: [:VIM_EVAL:]CURRENT_TIME[:END_EVAL:]
     Last Modified: [:VIM_EVAL:]CURRENT_TIME[:END_EVAL:]
 -->
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-
-<body>
-    <p>Hello World.</p>
-</body>
-
-</html>

@@ -1,3 +1,9 @@
+" File Name: templates.vim
+" Author: cissoid
+" Created At: 2017-03-01T18:24:41+0800
+" Last Modified: 2017-03-01T18:26:20+0800
+scriptencoding utf-8
+
 if exists("g:loaded_templates")
     finish
 endif
