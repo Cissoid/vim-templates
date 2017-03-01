@@ -1,12 +1,13 @@
 /*
- * File Name: [:VIM_EVAL:]CURRENT_FILE[:END_EVAL:]
- * Author: [:VIM_EVAL:]GIT_AUTHOR[:END_EVAL:]
- * Created At: [:VIM_EVAL:]CURRENT_TIME[:END_EVAL:]
- * Last Modified: [:VIM_EVAL:]CURRENT_TIME[:END_EVAL:]
+ * File Name: [:EVAL:]CURRENT_FILE[:END:]
+ * Author: [:EVAL:]GIT_AUTHOR[:END:]
+ * Created At: [:EVAL:]CURRENT_TIME[:END:]
+ * Last Modified: [:EVAL:]CURRENT_TIME[:END:]
  */
 #include <stdio.h>
 
 int main(int argc, char **argv) {
     printf("Hello World\n");
     return 0;
+    [:EVAL:]CURSOR[:END:]
 }

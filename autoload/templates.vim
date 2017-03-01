@@ -1,13 +1,14 @@
 " File Name: templates.vim
 " Author: cissoid
 " Created At: 2017-03-01T18:23:28+0800
-" Last Modified: 2017-03-01T18:23:42+0800
+" Last Modified: 2017-03-01T18:39:05+0800
 scriptencoding utf-8
 
 let s:templates_parsers = {
     \ 'CURRENT_FILE': 'templates#parser#CurrentFile',
     \ 'CURRENT_TIME': 'templates#parser#CurrentTime',
-    \ 'GIT_AUTHOR': 'templates#parser#GitAuthor'
+    \ 'GIT_AUTHOR': 'templates#parser#GitAuthor',
+    \ 'CURSOR': 'templates#parser#CursorLocation'
     \ }
 
 function! s:ParseCommand(parser_args)

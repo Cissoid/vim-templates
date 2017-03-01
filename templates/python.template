@@ -1,15 +1,16 @@
 #!/usr/bin/env python
 # coding: utf-8
-# File Name: [:VIM_EVAL:]CURRENT_FILE[:END_EVAL:]
-# Author: [:VIM_EVAL:]GIT_AUTHOR[:END_EVAL:]
-# Created At: [:VIM_EVAL:]CURRENT_TIME[:END_EVAL:]
-# Last Modified: [:VIM_EVAL:]CURRENT_TIME[:END_EVAL:]
+# File Name: [:EVAL:]CURRENT_FILE[:END:]
+# Author: [:EVAL:]GIT_AUTHOR[:END:]
+# Created At: [:EVAL:]CURRENT_TIME[:END:]
+# Last Modified: [:EVAL:]CURRENT_TIME[:END:]
 
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 
 def main():
     print('Hello World')
+    [:EVAL:]CURSOR[:END:]
 
 if __name__ == '__main__':
     main()

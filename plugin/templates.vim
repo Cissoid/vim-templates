@@ -1,7 +1,7 @@
 " File Name: templates.vim
 " Author: cissoid
 " Created At: 2017-03-01T18:24:41+0800
-" Last Modified: 2017-03-01T18:26:20+0800
+" Last Modified: 2017-03-01T18:40:06+0800
 scriptencoding utf-8
 
 if exists("g:loaded_templates")
@@ -15,11 +15,11 @@ if !exists('g:templates_folder')
 endif
 
 if !exists('g:templates_exec_start')
-    let g:templates_exec_start = '\[:VIM_EVAL:\]'
+    let g:templates_exec_start = '\[:EVAL:\]'
 endif
 
 if !exists('g:templates_exec_end')
-    let g:templates_exec_end = '\[:END_EVAL:\]'
+    let g:templates_exec_end = '\[:END:\]'
 endif
 
 if !exists('g:templates_update_lines')
