@@ -4,3 +4,31 @@
  * Created At: [:EVAL:]CURRENT_TIME[:END:]
  * Last Modified: [:EVAL:]CURRENT_TIME[:END:]
  */
+
+.container {
+    /* inline-flex */
+    display: flex;
+    /* row-reverse | column | column-reverse */
+    flex-direction: row;
+    /* wrap | wrap-reverse */
+    flex-wrap: nowrap;
+    /* flex-end | center | space-between | space-around | space-evenly */
+    justify-content: flex-start;
+    /* flex-start | flex-end | center | baseline */
+    align-items: stretch;
+    /* flex-start | flex-end | center | space-between | space-around */
+    align-content: stretch;
+}
+
+.item {
+    /* order: 1; */
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    /* flex-start | flex-end | center | baseline | stretch */
+    align-self: auto;
+}
+
+
+
+/* vim: filetype=css */
