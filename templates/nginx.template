@@ -1,24 +1,24 @@
 user       www www;  ## Default: nobody
 worker_processes  auto;  ## Default: 1
-error_log  logs/error.log;
+error_log  /var/log/nginx/error.log;
 pid        /var/run/nginx.pid;
 worker_rlimit_nofile 8192;
 
 events {
     worker_connections  4096;  ## Default: 1024
     # use [ kqueue | epoll | /dev/poll | select | poll ];
-    use epoll;
+    # use epoll;
 }
 
 http {
-    include    conf/mime.types;
+    include    mime.types;
     default_type application/octet-stream;
     index    index.html index.htm index.php;
 
     log_format   main '$remote_addr - $remote_user [$time_local]  $status '
       '"$request" $body_bytes_sent "$http_referer" '
       '"$http_user_agent" "$http_x_forwarded_for"';
-    access_log   logs/access.log  main;
+    access_log   /var/log/nginx/access.log  main;
 
     # client_header_timeout  3m;
     # client_body_timeout    3m;
@@ -50,7 +50,7 @@ http {
     # server { # php/fastcgi
     #     listen       80;
     #     server_name  domain1.com www.domain1.com;
-    #     access_log   logs/domain1.access.log  main;
+    #     access_log   /var/log/nginx/domain1.access.log  main;
     #     root         html;
 
     #     location ~ \.php$ {
@@ -61,7 +61,7 @@ http {
     # server { # simple reverse-proxy
     #     listen       80;
     #     server_name  domain2.com www.domain2.com;
-    #     access_log   logs/domain2.access.log  main;
+    #     access_log   /var/log/nginx/domain2.access.log  main;
 
     #     # serve static files
     #     location ~ ^/(images|javascript|js|css|flash|media|static)/  {
@@ -86,7 +86,7 @@ http {
         listen        80;
         server_name   domain3.com  www.domain3.com;
 
-        # access_log   logs/domain3.access.log  main;
+        # access_log   /var/log/nginx/domain3.access.log  main;
 
         location / {
             proxy_pass      http://domain3_server;
@@ -143,7 +143,7 @@ http {
 
             root         /spool/www;
             #autoindex    on;
-            access_log   logs/download.access_log  download;
+            # access_log   var/log/nginx/download.access.log  main;
         }
 
         location ~* \.(jpg|jpeg|gif)$ {
