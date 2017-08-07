@@ -1,9 +1,7 @@
-/*
- * File Name: [:EVAL:]CURRENT_FILE[:END:]
- * Author: [:EVAL:]GIT_AUTHOR[:END:]
- * Created At: [:EVAL:]CURRENT_TIME[:END:]
- * Last Modified: [:EVAL:]CURRENT_TIME[:END:]
- */
+// File Name: [:EVAL:]CURRENT_FILE[:END:]
+// Author: [:EVAL:]GIT_AUTHOR[:END:]
+// Created At: [:EVAL:]CURRENT_TIME[:END:]
+// Last Modified: [:EVAL:]CURRENT_TIME[:END:]
 
 .container {
     /* inline-flex */
@@ -29,5 +27,4 @@
     }
 }
 
-
-/* vim: filetype=scss */
+// vim: filetype=scss
