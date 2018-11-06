@@ -2,7 +2,7 @@
 // Author: [:EVAL:]GIT_AUTHOR[:END:]
 // Created At: [:EVAL:]CURRENT_TIME[:END:]
 // Last Modified: [:EVAL:]CURRENT_TIME[:END:]
-package main
+package [:EVAL:]CURRENT_DIR[:END:]
 
 import (
     "fmt"
